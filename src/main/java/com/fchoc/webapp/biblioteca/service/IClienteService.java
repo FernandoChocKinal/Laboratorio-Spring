@@ -8,9 +8,9 @@ public interface IClienteService {
 
     public List<Cliente> listarClientes();
 
-    public void guardarCliente(Cliente cliente);
-
     public Cliente buscarClientePorId(Long id);
+
+    public void guardarCliente(Cliente cliente);
 
     public void eliminarCliente(Cliente clientes);
 }

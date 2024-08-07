@@ -20,13 +20,13 @@ public class ClienteService implements IClienteService{
     }
 
     @Override
-    public void guardarCliente(Cliente cliente) {
-        clienteRepository.save(cliente);
+    public Cliente buscarClientePorId(Long id) {
+        return clienteRepository.findById(id).orElse(null);
     }
 
     @Override
-    public Cliente buscarClientePorId(Long id) {
-        return clienteRepository.findById(id).orElse(null);
+    public void guardarCliente(Cliente cliente) {
+        clienteRepository.save(cliente);
     }
 
     @Override
